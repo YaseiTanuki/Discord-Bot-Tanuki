@@ -2,7 +2,7 @@
 One of the discord bot series - Tanuki
 
 ## Status
-<b  style="color:red">UNCOMPLETED</b>
+<b>UNCOMPLETED</b>
 
 ## Description
 - This bot is create in order to manage my private discord channel.
