@@ -1,6 +1,9 @@
 # Discord-Bot-Tanuki
 One of the discord bot series - Tanuki
 
+## Status
+<b  style="color:red">UNCOMPLETED</b>
+
 ## Description
 - This bot is create in order to manage my private discord channel.
 - You are unable to deploy the bot I'm using. But you can follow the guild below to make it your own.
