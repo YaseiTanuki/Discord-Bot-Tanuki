@@ -2,7 +2,7 @@
 One of the discord bot series - Tanuki
 
 ## Status
-<b  style="color:red">UNCOMPLETED</b>
+<b>UNCOMPLETED</b>
 
 ## Description
 - This bot is create in order to manage my private discord channel.
@@ -10,5 +10,6 @@ One of the discord bot series - Tanuki
 
 ## Install
 1. Follow the [Discord.py document](https://discordpy.readthedocs.io/en/latest/discord.html) to create a Bot Account and deploy it to your server.
-2. Create `.env` file. Copy your Bot Token and paste it to `DISCORD_APP_TOKEN` field. (example in .env.example)
+2. Create `.env` file. Copy your Bot Token and paste it to `DISCORD_APP_TOKEN` field. (example in .env.example).
+3. Fill the rest of `.env` file by following the `.env.example`.
 3. Starting by using `py -3 src/main.py` command.
