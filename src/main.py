@@ -2,13 +2,12 @@ import os
 from dotenv import load_dotenv
 import discord
 from discord.ext import commands
-from discord.ext import tasks
+
 
 # Using .env file
 load_dotenv()
 
 intents = discord.Intents.all()
-intents.members = True
 bot = commands.Bot(command_prefix="ta! ", intents=intents)
 
 # Print when bot is ready
