@@ -15,6 +15,9 @@ class ManageMember(commands.Cog):
     async def sayonara(seft, ctx, user: discord.Member): #kick member
         if ctx.message.author.top_role > user.top_role:
             await user.kick()
+            print(f'{user.name} is gone!')
+        else:
+            print("You don't have permission!")
 
 # For making extension
 async def setup(bot):
