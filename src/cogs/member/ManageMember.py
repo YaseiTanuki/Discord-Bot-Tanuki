@@ -22,7 +22,7 @@ class ManageMember(commands.Cog):
     @commands.command()
     async def you_are_now(seft, ctx, role: discord.Role, user:  discord.Member):
         print(role)
-        able_to_set_role = os.getenv('ABLE_TO_SET_ROLE')
+        able_to_set_role = os.getenv('ABLE_TO_SET_ROLE').split(', ')
         print(able_to_set_role)
         if(role.name in able_to_set_role):
             if discord.utils.get(ctx.guild.roles, name = role.name):
