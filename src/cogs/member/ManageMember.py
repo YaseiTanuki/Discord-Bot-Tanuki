@@ -33,6 +33,15 @@ class ManageMember(commands.Cog):
         else:
             await ctx.send("You don't have permission!")
 
+    @commands.command()
+    async def you_are_no_longer(seft, ctx, role: discord.Role, user: discord.Member):
+        if ctx.message.author.top_role > user.top_role:
+            await user.remove_roles(role)
+            await ctx.send(f"{user} is no longer a {role}")
+        else:
+            await ctx.send("You don't have permission!")
+        
+
 # For making extension
 async def setup(bot):
     await bot.add_cog(ManageMember(bot))
