@@ -20,20 +20,19 @@ class ManageMember(commands.Cog):
             await ctx.send("You don't have permission!")
 
     @commands.command()
+    @commands.has_permissions(manage_roles = True)
     async def you_are_now(seft, ctx, role: discord.Role, user:  discord.Member):
-        print(role)
-        able_to_set_role = os.getenv('ABLE_TO_SET_ROLE').split(', ')
-        print(able_to_set_role)
-        if(role.name in able_to_set_role):
-            if discord.utils.get(ctx.guild.roles, name = role.name):
+        if discord.utils.get(ctx.guild.roles, name = role.name):
+            if ctx.message.author.top_role > role:
                 await user.add_roles(role)
                 await ctx.send(f"{user} is now {role}")
             else:
-                await ctx.send("Role not exist!")
+                await ctx.send("You don't have permission!")
         else:
-            await ctx.send("You don't have permission!")
+            await ctx.send("Role not exist!")
 
     @commands.command()
+    @commands.has_permissions(manage_roles = True)
     async def you_are_no_longer(seft, ctx, role: discord.Role, user: discord.Member):
         if ctx.message.author.top_role > user.top_role:
             await user.remove_roles(role)
