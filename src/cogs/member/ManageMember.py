@@ -1,4 +1,3 @@
-import os
 import discord
 from dotenv import load_dotenv
 from discord.ext import commands
@@ -20,6 +19,16 @@ class ManageMember(commands.Cog):
             await ctx.send("You don't have permission!")
 
     @commands.command()
+    @commands.has_permissions(ban_members = True)
+    async def ban(self, ctx, user: discord.Member): #ban member
+        if ctx.message.author.top_role > user.top_role:
+            await user.ban()
+            await ctx.send(f'{user.name} is gone and will nerver comeback!')
+        else:
+            await ctx.send("You don't have permission!")
+
+
+    @commands.command()
     @commands.has_permissions(manage_roles = True)
     async def you_are_now(seft, ctx, role: discord.Role, user:  discord.Member):
         if discord.utils.get(ctx.guild.roles, name = role.name):
@@ -34,12 +43,14 @@ class ManageMember(commands.Cog):
     @commands.command()
     @commands.has_permissions(manage_roles = True)
     async def you_are_no_longer(seft, ctx, role: discord.Role, user: discord.Member):
-        if ctx.message.author.top_role > user.top_role:
-            await user.remove_roles(role)
-            await ctx.send(f"{user} is no longer a {role}")
+        if discord.utils.get(ctx.guild.roles, name = role.name):
+            if ctx.message.author.top_role > user.top_role:
+                await user.remove_roles(role)
+                await ctx.send(f"{user} is no longer a {role}")
+            else:
+                await ctx.send("You don't have permission!")
         else:
-            await ctx.send("You don't have permission!")
-        
+            await ctx.send("Role not exist!")
 
 # For making extension
 async def setup(bot):
