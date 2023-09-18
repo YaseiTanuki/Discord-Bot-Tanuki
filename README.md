@@ -13,3 +13,6 @@ One of the discord bot series - Tanuki
 2. Create `.env` file. Copy your Bot Token and paste it to `DISCORD_APP_TOKEN` field. (example in .env.example).
 3. Fill the rest of `.env` file by following the `.env.example`.
 4. Starting by using `py -3 src/main.py` command.
+
+## LICENSE
+[Unlicense](https://github.com/YaseiTanuki/Discord-Bot-Tanuki/blob/main/LICENSE)
