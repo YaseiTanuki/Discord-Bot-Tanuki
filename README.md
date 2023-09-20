@@ -15,4 +15,4 @@ One of the discord bot series - Tanuki
 4. Starting by using `py -3 src/main.py` command.
 
 ## LICENSE
-[Unlicense](https://github.com/YaseiTanuki/Discord-Bot-Tanuki/blob/main/LICENSE)
+Project is under [MIT License](https://github.com/YaseiTanuki/Discord-Bot-Tanuki/blob/main/LICENSE)
