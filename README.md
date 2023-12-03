@@ -14,5 +14,8 @@ One of the discord bot series - Tanuki
 3. Fill the rest of `.env` file by following the `.env.example`.
 4. Starting by using `py -3 src/main.py` command.
 
+## Tech
+<img title="Python" src="https://github.com/YaseiTanuki/Utilities/raw/main/TechIcon/python.svg" alt="Python" width="30px" height="30px">
+
 ## LICENSE
 Project is under [MIT License](https://github.com/YaseiTanuki/Discord-Bot-Tanuki/blob/main/LICENSE)
